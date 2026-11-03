@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  27 OCT 2026 16:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  3 NOV 2026 15:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -323,10 +323,83 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} 
 <./orcid.pdf>]
+<server_wiring_diagram.png, id=62, 867.24pt x 542.025pt>
+File: server_wiring_diagram.png Graphic file (type png)
+<use server_wiring_diagram.png>
+Package pdftex.def Info: server_wiring_diagram.png  used on input line 45.
+(pdftex.def)             Requested size: 348.26305pt x 217.66629pt.
+<newbuild3p_cap_profile_stacked_2040.png, id=65, 1023.3432pt x 589.7232pt>
+File: newbuild3p_cap_profile_stacked_2040.png Graphic file (type png)
+<use newbuild3p_cap_profile_stacked_2040.png>
+Package pdftex.def Info: newbuild3p_cap_profile_stacked_2040.png  used on input
+ line 54.
+(pdftex.def)             Requested size: 435.32716pt x 250.8675pt.
+<newbuild3p_gen_profile_stacked_2040.png, id=67, 1026.9567pt x 589.0005pt>
+File: newbuild3p_gen_profile_stacked_2040.png Graphic file (type png)
+<use newbuild3p_gen_profile_stacked_2040.png>
+Package pdftex.def Info: newbuild3p_gen_profile_stacked_2040.png  used on input
+ line 63.
+(pdftex.def)             Requested size: 435.32716pt x 249.67929pt.
+<newbuild3p_coverage_needed_geofacet.png, id=69, 1373.13pt x 867.24pt>
+File: newbuild3p_coverage_needed_geofacet.png Graphic file (type png)
+<use newbuild3p_coverage_needed_geofacet.png>
+Package pdftex.def Info: newbuild3p_coverage_needed_geofacet.png  used on input
+ line 72.
+(pdftex.def)             Requested size: 435.32716pt x 274.94203pt.
 
-[2]
 
-[3] (./main.aux)
+[2 <./server_wiring_diagram.png>]
+
+[3 <./newbuild3p_cap_profile_stacked_2040.png> <./newbuild3p_gen_profile_stacke
+d_2040.png>]
+
+[4 <./newbuild3p_coverage_needed_geofacet.png>]
+<newbuild3p_npvcost2040_effective_rate_gas_options.png, id=98, 747.9945pt x 584
+.6643pt>
+File: newbuild3p_npvcost2040_effective_rate_gas_options.png Graphic file (type 
+png)
+<use newbuild3p_npvcost2040_effective_rate_gas_options.png>
+Package pdftex.def Info: newbuild3p_npvcost2040_effective_rate_gas_options.png 
+ used on input line 92.
+(pdftex.def)             Requested size: 435.32716pt x 340.27422pt.
+<newbuild3p_delta_avgcost_map_2040.png, id=100, 1157.7654pt x 740.7675pt>
+File: newbuild3p_delta_avgcost_map_2040.png Graphic file (type png)
+<use newbuild3p_delta_avgcost_map_2040.png>
+Package pdftex.def Info: newbuild3p_delta_avgcost_map_2040.png  used on input l
+ine 101.
+(pdftex.def)             Requested size: 435.32716pt x 278.53314pt.
+<newbuild3p_avgcost_summary.png, id=102, 1257.498pt x 485.6544pt>
+File: newbuild3p_avgcost_summary.png Graphic file (type png)
+<use newbuild3p_avgcost_summary.png>
+Package pdftex.def Info: newbuild3p_avgcost_summary.png  used on input line 110
+.
+(pdftex.def)             Requested size: 435.32716pt x 168.12897pt.
+
+
+[5 <./newbuild3p_npvcost2040_effective_rate_gas_options.png>]
+
+[6 <./newbuild3p_delta_avgcost_map_2040.png> <./newbuild3p_avgcost_summary.png>
+]
+<baseline_vs_newbuild3p_hourly_TREW_wk08.png, id=121, 1076.1003pt x 420.6114pt>
+
+File: baseline_vs_newbuild3p_hourly_TREW_wk08.png Graphic file (type png)
+<use baseline_vs_newbuild3p_hourly_TREW_wk08.png>
+Package pdftex.def Info: baseline_vs_newbuild3p_hourly_TREW_wk08.png  used on i
+nput line 121.
+(pdftex.def)             Requested size: 435.32716pt x 170.15414pt.
+<forecast3p_npvcost2040_effective_rate.png, id=123, 756.6669pt x 584.6643pt>
+File: forecast3p_npvcost2040_effective_rate.png Graphic file (type png)
+<use forecast3p_npvcost2040_effective_rate.png>
+Package pdftex.def Info: forecast3p_npvcost2040_effective_rate.png  used on inp
+ut line 130.
+(pdftex.def)             Requested size: 435.32716pt x 336.3667pt.
+
+
+[7 <./baseline_vs_newbuild3p_hourly_TREW_wk08.png>]
+
+[8 <./forecast3p_npvcost2040_effective_rate.png>]
+
+[9] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -340,34 +413,42 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: F1DFE85E01CA1E4334DEC408037D6D4C;776.
  ) 
 Here is how much of TeX's memory you used:
- 9341 strings out of 473190
- 145539 string characters out of 5715801
- 565825 words of memory out of 5000000
- 32485 multiletter control sequences out of 15000+600000
- 565443 words of font info for 58 fonts, out of 8000000 for 9000
+ 9443 strings out of 473190
+ 148917 string characters out of 5715801
+ 569582 words of memory out of 5000000
+ 32568 multiletter control sequences out of 15000+600000
+ 565948 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,12n,93p,1407b,449s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,93p,1407b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
-/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
-sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
-/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
-xlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
-ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texliv
-e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive
-/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2
-025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/202
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/20
-25/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/t
-exmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (3 pages, 195499 bytes).
+/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
+ocal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
+texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
+live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
+e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
+025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/20
+25/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/202
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2025/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2025/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2025/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2025/texmf-dist/f
+onts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (9 pages, 1246666 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
- 17 named destinations out of 1000 (max. 500000)
- 62 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 268 PDF objects out of 1000 (max. 8388607)
+ 184 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 107 words of extra memory for PDF output out of 10000 (max. 10000000)
 
