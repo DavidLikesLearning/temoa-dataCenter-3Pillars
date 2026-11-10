@@ -32,108 +32,58 @@ Data center loads made up about 1\% of global energy use Cite[masanet,2020] and 
 
 One method of regulation may be the three pillars. Deployed in the US,  Europe, and partially in Canda, for regulating and alloting tax credits to green hydrogen Cite [Federal Register, 2025; EUR-lex, 2023; Bartlett, 2024]. There's international academic literature already exploring why each of the three pillars is needed to control emissions of electrolytic hydrogen Cite [Ricks, 2023; Zeyen, 2024]. Server grid siting Cite [Vabson, 2026], regulation Cite [Park, 2026; Senga, 2026], emissions Cite [Johnson, 2026] and derived health impacts have also been explored in academic literature Cite [Mueller, 2026]. Moreover, regulators have already mobilized to regulate server loads. E3 notes dozens of large load tariffs in response to server loads weighting down the public grid Cite [Beer, 2026], the Ratepayer Protection Act passed the U.S. House of Representatives this September Cite [Howland, 2026 (2)], and various industry, and regulatory, actors are currently exploring how to manage these new sizeable data center loads Cite [Viswanath, 2026].
 
-Our contribution is evaluating a number of regulatory policies for the regulation of new server loads. To the best of our knowledge, we are the first work to evaluate policy impacts on server load adoption throughout the continuous US. We do this at an hourly resolution and for 26 regions defined by ISO/RTO boundaries and NERC assessment areas. We produce national and per-region estimates for costs, emissions, capacity expansion and generation profile impacts of explored policies.
+Our contribution is evaluating a number of regulatory policies for the regulation of new server loads. To the best of our knowledge, we are the first work to evaluate policy impacts on server load adoption throughout the continuous US. We do this at an hourly resolution and for 26 regions defined by ISO/RTO boundaries and NERC assessment areas. We produce national and per-region estimates for costs, emissions, capacity expansion and generation profile impacts of explored policies. We do this at various 'coverage' levels. These are the percents of server load under three pillars regulation to procure renewable energy.
 
 
 \section{Results}
 % Earlier notes: Lower LMPs with renewables, less pollution deaths too. higher capex maybe. batteries help out. sensitivity analysis needed in projected demand and costs of fuel and generators.
 
-All results below come from the CONUS 26-zone model at 3,360 hourly time slices per year, solved myopically over 2027--2040. ``Coverage'' is the share of each zone's hourly server load that must be met under the three pillars; the rest of the server load is served by the ordinary grid. ``New-Build 3P'' applies additionality as a new-build (vintage $\geq 2027$) filter only; ``Forecast 3P'' adds a counterfactual-additionality floor (Methods). Present-value costs are discounted to 2027 at 2\% and corrected for the myopic capital-cost truncation described in Methods. NYCW's server side is excluded throughout because it has no generation potential in Temoa. It is basically NYC. 
+All results are New-Build 3P on the CONUS 26-zone model (3,360 hourly slices per year, myopic over 2027--2040), solved with the two-step method in Methods, at coverage 10--100\% of each zone's hourly server load. Present-value costs are discounted to 2027 at 2\% annually and corrected for myopic capital-cost truncation (SI); NYCW's server side is excluded throughout.
+
+
+\subsection{Generation}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.8\linewidth]{server_wiring_diagram.png}
-\caption{How server load is wired in Temoa, in every hour and every region. Public generators feed the \texttt{electricity} commodity, which serves the regular grid load. Eligible clean generators built for servers feed a separate \texttt{server\_electricity} commodity, which serves the regulated server load (\texttt{DEMAND\_SERVERS\_45V}). A one-way converter (\texttt{server\_to\_elec}) lets surplus server electricity spill into the public grid; nothing flows the other way.}
-\label{fig:wiring}
-\end{figure}
-
-Figure~\ref{fig:wiring} shows the carve-out that every three-pillars result relies on. Because server electricity is its own commodity, Temoa's per-slice balance enforces hourly matching on it, and leaving out a transmission clone keeps it in its zone. The converter is the only link between the two networks: carve-out generation can serve other load when it exceeds the servers' needs, but grid electricity cannot count toward the covered share.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\linewidth]{newbuild3p_cap_profile_stacked_2040.png}
-\caption{New-Build 3P national standing capacity in 2040 (GW) by technology family, from the pre-2027 fleet through the coverage sweep. Solid bars are public build; diagonal-pattern bars are capacity built for servers. Green squares mark total battery capacity (not stacked); hollow squares mark the battery capacity built for servers. ``p1p3'' is 100\% coverage with hourly matching relaxed to annual matching.}
-\label{fig:capacity}
-\end{figure}
-
-Figure~\ref{fig:capacity} shows the build-out behind each scenario. Adding server load with no regulation (0\%) raises 2040 capacity from 1,732~GW (no servers) to 1,893~GW. Raising coverage from 20\% to 100\% adds a further 139~GW net, from 1,897 to 2,036~GW, and lifts battery capacity from 135 to 212~GW. Most server-dedicated wind and solar (diagonal-pattern) takes the place of public renewable build rather than adding to it. Forecast 3P builds the most (2,187~GW). Gas alternatives at 100\% build less in total (1,871~GW with combustion turbines, 1,848~GW with combined cycles), because firm gas capacity replaces the overbuild of variable renewables and storage that hourly matching otherwise needs. Relaxing hourly matching to an annual balance (p1p3) cuts the total back to 1,904~GW, close to the unregulated case.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\linewidth]{newbuild3p_gen_profile_stacked_2040.png}
-\caption{New-Build 3P national generation in 2040 (TWh) by technology family. diagonal-pattern segments are generation by server technologies. The purple bar beside each stack is server electricity spilled to the public grid; it is already counted in the stack and is drawn separately so it is not double-counted. Green squares mark battery discharge (not stacked). The p1p3 run has no equivalent spillover mechanism.}
+\includegraphics[width=\linewidth]{newbuild3p_generation_bars_2040.png}
+\caption{National 2040 generation by source (TWh), with the server fleet fixed and the converter on. Hatched segments are built for servers; green squares are battery discharge (not stacked) and diamonds are server demand.}
 \label{fig:generation}
 \end{figure}
 
-Total 2040 generation hardly moves with coverage (6,494~TWh at 0\% to 6,527~TWh at 100\%), since the load is the same. What changes is the mix (figure~\ref{fig:generation}). Server-dedicated wind and solar grow with coverage and mostly replace public wind and solar. Public gas generation falls by a few hundred TWh between 0\% and 100\%, and coal barely changes. Spillover to the public grid grows from roughly 400~TWh at 20\% coverage to about 850~TWh at 100\%. Hourly matching sizes the carve-out for its hardest hours, so in most other hours it produces more than the servers use and the surplus serves other load. Under the gas options, the diagonal-pattern segment is gas generation instead.
+Total 2040 generation barely moves with coverage (6,703~TWh unregulated, 6,727~TWh at 100\%), but server-built solar and wind grow while public solar and gas shrink (figure~\ref{fig:generation}). Battery discharge rises from 228~TWh with unregulated servers to 416~TWh at 100\% coverage.
+
+\subsection{Coverage needed by zone}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{newbuild3p_coverage_needed_geofacet.png}
-\caption{New-Build 3P, by zone: the coverage needed to mitigate server impacts on the public grid. This is the lowest tested coverage (10--100\%) at which the public grid is at or below the no-servers case for 2040 CO$_2$ (green), the 2040 demand-weighted marginal cost (dual of the demand balance, divided by the 2040 period weight; blue), and the 2027--2040 average present cost of energy (yellow). A bar labelled $\leq 10$ means the threshold was met at the lowest tested coverage. Diagonal-pattern full-height bars with a cross mark impacts not mitigated by 100\% coverage; the number is how far the 3P regulated metric is above the no-servers metric. The average cost includes the myopic capital-cost truncation correction.}
+\caption{Lowest tested coverage at which each zone's public grid is at or below the no-servers case, for average CO$_2$ and marginal cost (2027--2044) and average present cost (2027--2040). Tested levels are 10, 20, 30, 40, 60, 80, 90 and 100\%, so a bar at 60 means 41--60\%; hatched bars with a cross are not mitigated by 100\%.}
 \label{fig:geofacet}
 \end{figure}
 
-Figure~\ref{fig:geofacet} asks, zone by zone, how much of the server load must be covered to mitigate the servers' impact on the public grid, taking the no-servers' level as the desired value for each of the three metrics. Each answers differently. Average-cost impacts are mitigated earliest: 11 of 25 zones are back at or below the no-servers case at $\leq 10\%$ coverage, five more by 20\%, and only CASO is still above at 100\% (+9\%). Marginal cost needs much more: 40--90\% coverage in every zone except CASO ($\leq 10\%$). Emissions impacts are the hardest to mitigate. Thirteen zones still emit more than in the no-servers case at 100\% coverage, by 0--4\%. In the other twelve, emissions impacts are mitigated, half of them at $\leq 10\%$.
+By 100\% coverage the public grid is at or below the no-servers case in 23 of 25 zones for average cost, 22 for marginal cost and 17 for CO$_2$ (figure~\ref{fig:geofacet}). Average cost is mitigated at $\leq 10\%$ in ten zones, while CO$_2$ and marginal cost mostly need 60--100\%.
 
-\subsection{Relations Between Duals and Average Cost (SI, maybe)}
-The gap between the average-cost and marginal-cost thresholds follows from strong duality. At the optimum, total cost equals the sum over constraints of right-hand side times their respective dual, $C^* = \sum_i b_i y_i^*$. Separating the demand-balance term $\Pi = \sum d\,\pi$ (demand priced at the marginal cost $\pi$) from the rest and dividing by discounted demand $D$ gives
-\begin{equation}
-\frac{C^*}{D} \;-\; \frac{\Pi}{D} \;=\; \frac{1}{D}\sum_{i\,\notin\,\mathrm{demand}} b_i y_i^* ,
-\end{equation}
-so average cost exceeds the average dual exactly when the non-demand constraints contribute positively, and falls below it when they contribute negatively. New-build capacity nets out: its capital cost appears in both $C^*$ and the duals. The contributing constraints split into two types:
-\begin{itemize}
-\item \textbf{Push average cost above the duals} ($b_i y_i^* > 0$): binding \emph{floors} ($\geq$ constraints with positive right-hand side and nonnegative dual), such as clean-energy-share requirements and minimum-capacity limits, which force in resources costlier than the marginal one. Existing capacity whose dual is positive does the same: plants that cannot retire and save nothing at the margin, so their fixed O\&M is a sunk cost spread over every MWh.
-\item \textbf{Pull average cost below the duals} ($b_i y_i^* < 0$): binding \emph{caps} ($\leq$ constraints with nonpositive dual), such as resource-potential limits, maximum-capacity limits and emission caps. These hold back a resource cheaper than the marginal one and earn it a scarcity rent. Existing capacity whose dual is negative does the same: legacy plants that are cheaper than new marginal build earn an inframarginal rent through avoided capital and fuel costs.
-\end{itemize}
-With no existing capacity and no binding limits, average cost and the average dual would coincide. In these runs, covered server load plausibly mitigates the public average-cost impact quickly by spreading existing-fleet fixed costs and the spilled carve-out surplus over more MWh. The 2040 marginal cost, by contrast, stays set by the marginal (mostly gas) unit until enough carve-out supply displaces it in enough hours, which takes far more coverage. The identity explains why the two metrics can diverge, but it is not an exact accounting between the bars here. It holds system-wide and per myopic window for the cost as solved. Our duals are 2040-only, while the average cost spans 2027--2040 and carries the truncation correction. Per zone, interzonal transmission also adds congestion rents that the identity assigns only system-wide.
+\subsection{System cost and emissions}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\linewidth]{newbuild3p_npvcost2040_effective_rate_gas_options.png}
-\caption{Top: New-Build 3P present-value system cost to 2040 (\$ trillion). Each point is labelled with the flat \$/MWh rate that, charged to data centers on their whole consumption, would recover all cost above the no-servers case. Bottom: 2040 national CO$_2$ relative to the no-servers case (Mt/yr). The gas CT and gas CC points meet 100\% coverage with new gas plants instead of clean generation (no geothermal).}
+\includegraphics[width=\linewidth]{newbuild3p_npvcost2040_effective_rate.png}
+\caption{Top: present-value system cost to 2040, labelled with the flat \$/MWh rate on all server load that recovers the cost above the no-servers case. Bottom: 2040 national CO$_2$ relative to no servers; the gas CT and CC points serve 100\% of server load with new gas plants (no geothermal).}
 \label{fig:npvcost}
 \end{figure}
 
-Serving data centers is expensive in any form: adding server load with no regulation raises present-value system cost from \$2.80T to \$3.12T, equivalent to \$43/MWh of server load (figure~\ref{fig:npvcost}). Each step of coverage adds cost, reaching \$3.41T (\$83/MWh) at 100\%, and each step cuts emissions. The +96~Mt/yr of 2040 CO$_2$ added by unregulated servers falls to +76, +58 and +35~Mt/yr at 40, 60 and 80\% coverage, and to +9~Mt/yr at 100\%. The 20\% mandate buys no emissions reduction relative to the unregulated case. The gas options show the trade-off: gas CC is cheaper than 60\% coverage (\$3.23T, \$58/MWh) but adds 175~Mt/yr. Gas CT costs more than 100\% clean coverage (\$3.45T, \$88/MWh) and adds 301~Mt/yr.
+Unregulated servers raise present-value system cost from \$2.80T to \$3.12T (\$43/MWh of server load), and coverage raises it further to \$3.43T (\$85/MWh) at 100\% (figure~\ref{fig:npvcost}). The 2040 CO$_2$ excess over no servers falls from +96~Mt/yr unregulated to +21~Mt/yr at 100\%, against +175 (gas CC) and +301~Mt/yr (gas CT).
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\linewidth]{newbuild3p_delta_avgcost_map_2040.png}
-\caption{New-Build 3P at 100\% coverage: change in the public-grid average present cost of energy (2027--2040, \$/MWh, present value to 2027) relative to the no-servers case. ``Pub'' is that change; ``Srv'' is the server-side average present cost. A check mark means at or below the no-servers case; a cross means still above. NYUP ($-55.2$) is beyond the colour scale; NYCW is excluded.}
-\label{fig:avgcostmap}
-\end{figure}
-
-At full coverage the public grid pays less per MWh than without servers in 24 of 25 zones (figure~\ref{fig:avgcostmap}). The largest savings are in TREW ($-10.6$), SPPN ($-9.5$), PJMW ($-9.0$) and PJMC ($-7.8$~\$/MWh). NYUP ($-55.2$~\$/MWh) is an outlier. CASO is the only zone where the public grid is worse off (+1.9~\$/MWh). The server side pays for this: server average cost ranges from \$52/MWh (CANO) to \$296/MWh (ISNE) and \$954/MWh (NYUP).
+\subsection{Who pays: public and server average cost}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{newbuild3p_avgcost_summary.png}
-\caption{National public-side and server-side present-value average cost (\$/MWh) for the no-servers case, servers without regulation, New-Build 3P at 20--100\% coverage, and servers served by new gas CC or gas CT. The server-side cost is blended: covered MWh at the carve-out cost plus uncovered MWh at that scenario's public rate, divided by total server MWh. Server fuel in the gas cases is charged to the server side.}
+\caption{Public-side and server-side present-value average cost (2027--2040, \$/MWh), with the server fleet fixed and the converter on. Server cost is blended (covered MWh at the carve-out cost plus uncovered MWh at that run's public rate); gas CC and CT are separate runs that serve 100\% of server load with new gas, with server fuel charged to the servers.}
 \label{fig:avgcostsummary}
 \end{figure}
 
-Figure~\ref{fig:avgcostsummary} separates who pays. Unregulated server load raises the public average cost from \$38 to \$42/MWh. Coverage mitigates this increase: the public average cost is \$38/MWh at 20\% and falls below the no-servers level beyond that, reaching \$33/MWh at 100\%. The server side moves the other way, from \$72/MWh at 20\% coverage to \$128/MWh at 100\%. The three pillars thus move the cost of new server load off the public grid and onto the servers. Gas options keep public costs near the no-servers level (\$38--39/MWh) at a lower server cost (\$55/MWh CC, \$78/MWh CT), but with the emissions shown in figure~\ref{fig:npvcost}.
-
-\subsection*{Supplementary figures}
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\linewidth]{baseline_vs_newbuild3p_hourly_TREW_wk08.png}
-\caption{Hourly dispatch in TREW, a server-heavy zone where servers are about 37\% of load, for representative week 8 of 2030. Left: servers with no regulation. Right: New-Build 3P at 100\% coverage. Stacked areas are solar and wind (public and server combined); lines show load, public grid generation excluding storage, imports, and spillover from the carve-out to the public grid.}
-\label{fig:trewhourly}
-\end{figure}
-
-Figure~\ref{fig:trewhourly} shows the spillover mechanism at hourly scale. Under New-Build 3P, TREW's wind and solar output rises well above its unregulated level, and the carve-out spills about 3--12~GW to the public grid in most hours. Public grid generation (excluding spillover) sits lower than in the unregulated case, since the carve-out now supplies part of the zone's output.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\linewidth]{forecast3p_npvcost2040_effective_rate.png}
-\caption{As figure~\ref{fig:npvcost}, for Forecast 3P (new-build filter plus counterfactual-additionality floor) at 50--100\% coverage.}
-\label{fig:forecastcost}
-\end{figure}
-
-Forecast 3P costs more than New-Build 3P at each coverage (\$3.25T, \$62/MWh at 50\% to \$3.46T, \$89/MWh at 100\%) but turns server load into a net emissions reduction (figure~\ref{fig:forecastcost}). Already at 50\% coverage, 2040 national CO$_2$ is 14~Mt/yr below the no-servers case, reaching $-260$~Mt/yr at 100\%. This is consistent with the counterfactual floor's design: it requires carve-out build on top of what the grid would have built anyway, so its surplus cannot simply stand in for public renewables.
+Unregulated servers raise the public average cost from \$38 to \$42/MWh, and coverage brings it back to the no-servers level by about 60\% and down to \$36/MWh at 100\% (figure~\ref{fig:avgcostsummary}). The server side pays more as coverage rises, from \$48/MWh at 10\% to \$106/MWh at 100\%, against \$55 (gas CC) and \$78/MWh (gas CT).
 
 \section{Discussion}
 Results vary by region 
@@ -156,7 +106,17 @@ We also include a server-electricity to electricity converter. This allow leftov
 One noteworthy decision here is relaxing hourly matching whenever deliverability is relaxed. This is because without deliverability, energy procurement becomes an accounting exercise rather than a simulation of the grid graph's flows. Hourly matching without deliverability would thus enforce deploying server-electricity across hours with batteries and overbuilt renewables, and doing so up to thousands of miles away from where the load is. 
 
 \subsubsection{Partial Coverage}
-We model the complete regulation of servers under the three pillars, and we also model regulating various percetages server load at every region and hour. In some cases, it is not necessary to regulate every MWh of server load to keep average costs, marginal costs, and CO2 emissions "unimpacted" from the addition of servers. 
+We model the complete regulation of servers under the three pillars, and we also model regulating various percetages server load at every region and hour. In some cases, it is not necessary to regulate every MWh of server load to keep average costs, marginal costs, and CO2 emissions "unimpacted" from the addition of servers.
+
+\subsubsection{Two-Step Solve}
+Each coverage level is solved twice (figure~\ref{fig:twostep}): step 1 removes the converter so the server and public sides each build their own optimal fleet, and step 2 fixes server-side capacity (generators and batteries) at the step-1 result, restores the converter (efficiency 0.99) and lets the public grid re-optimize its build and dispatch. All results are from step 2, where server dispatch is free and only server capacity is fixed.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\linewidth]{server_two_step_wiring_diagram.png}
+\caption{Two-step solve. Step 1: the server and public paths are disconnected, giving separate, individually optimal buildouts. Step 2: the \texttt{server\_to\_elec} converter is added and the server-side build is fixed at the step-1 result (*); the public grid re-optimizes around it.}
+\label{fig:twostep}
+\end{figure}
 
 
 \section{Conclusions}
