@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1794342439.58044 "main.tex" "main.pdf" "main" 1794342440.81107 0
+["pdflatex"] 1794463417.19807 "main.tex" "main.pdf" "main" 1794463418.36986 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm0800.tfm" 1136768653 1536 05df9db6aeccc4eea94fec15c9024f79 ""
@@ -94,16 +94,16 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "iopjournal.cls" 1793112091.52241 5761 cac90802d0944ef390bc438cd9086a17 ""
-  "main.aux" 1794342440.73892 6043 1c552cfacc5c7b6f132ade560bd7d071 "pdflatex"
-  "main.out" 1794342440.73968 1761 f05b817da9aeb5cc2b2aa889f3fd6206 "pdflatex"
-  "main.tex" 1794342438.35232 15292 ad13cec5def0e96428665f60b3f5edd5 ""
+  "main.aux" 1794463418.29924 5800 6e094123bfe02168c4dbd191b96ee1be "pdflatex"
+  "main.out" 1794463418.29992 1673 799b7fcb34f56cd4a314dbd854f771a3 "pdflatex"
+  "main.tex" 1794463263.30797 15290 9175084297fba37c6a8e126978812a0e ""
+  "newbuild3p_avgcost_change_map.png" 1794463263.29262 214751 599d24f1d79e9813aba45d787cbf1e73 ""
   "newbuild3p_avgcost_summary.png" 1794342438.31635 111273 b1cfa746da8e373c6d34b5aa9a0c611c ""
   "newbuild3p_coverage_needed_geofacet.png" 1794342045.26649 146985 c9b3ae6d43b26e4e965048a8b2316a2c ""
   "newbuild3p_generation_bars_2040.png" 1794342045.27534 103018 066707f62fdd7cfb20c447f3a6b84099 ""
   "newbuild3p_npvcost2040_effective_rate.png" 1794342045.27773 119644 18bdcfd0a190d51b602a018035371655 ""
   "orcid.pdf" 1751033520 6631 67163638139187d60c4195750365b265 ""
   "server_two_step_wiring_diagram.png" 1794341708.74019 124835 7abbe7807718be08a288393bd13f514f ""
-  "server_wiring_diagram.png" 1791555859.9449 55481 b8365b4abadaad5627816201849cab61 ""
   (generated)
   "main.aux"
   "main.log"

@@ -50,7 +50,7 @@ All results are New-Build 3P on the CONUS 26-zone model (3,360 hourly slices per
 \label{fig:generation}
 \end{figure}
 
-Total 2040 generation barely moves with coverage (6,703~TWh unregulated, 6,727~TWh at 100\%), but server-built solar and wind grow while public solar and gas shrink (figure~\ref{fig:generation}). Battery discharge rises from 228~TWh with unregulated servers to 416~TWh at 100\% coverage.
+Total 2040 generation barely moves with coverage (6,703~TWh unregulated, 6,727~TWh at 100\%), but server-built solar and wind grow while public solar and gas shrink (figure~\ref{fig:generation}). Battery discharge rises from 228~TWh with unregulated servers to 416~TWh at 100\% coverage. We can also see that even without servers, and specially if they do rech their projected loads, the 2040 grid will require at least 33\% of present day generation.
 
 \subsection{Coverage needed by zone}
 
@@ -84,6 +84,13 @@ Unregulated servers raise present-value system cost from \$2.80T to \$3.12T (\$4
 \end{figure}
 
 Unregulated servers raise the public average cost from \$38 to \$42/MWh, and coverage brings it back to the no-servers level by about 60\% and down to \$36/MWh at 100\% (figure~\ref{fig:avgcostsummary}). The server side pays more as coverage rises, from \$48/MWh at 10\% to \$106/MWh at 100\%, against \$55 (gas CC) and \$78/MWh (gas CT).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{newbuild3p_avgcost_change_map.png}
+\caption{Change in each zone's public average cost (2027--2040, \$/MWh, present value) at 100\% coverage, server fleet fixed and converter on, relative to no servers. NYCW is excluded.}
+\label{fig:avgcostmap}
+\end{figure}
 
 \section{Discussion}
 Results vary by region 
